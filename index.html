@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Projekti 2a</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Projekti 2a: Ajax</h1>
+<br><br>
+<h2>Painamalla näytöllä olevia nappeja, saat haettua 10 ensimmäistä Finnkinolla pyörivää elokuvaa ja tietoja niistä!</h2>
+<br>
+<hr>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4" id="elokuvat">
+            <input type="button" class="button" name="fetch" id="fetch" value="Elokuvat" onclick="lataaLeffat()">
+        </div>
+        <div class="col-sm-4" id="kesto">
+            <input type="button" class="button" name="fetch" id="fetch" value="Elokuvan kesto" onclick="lataaKestot()">
+        </div>
+        <div class="col-sm-4" id="genre">
+            <input type="button" class="button" name="fetch" id="fetch" value="Elokuvan genre" onclick="lataaGenret()">
+        </div>
+        </div>
+    </div>
+
+
+<script src="script.js"></script>
+</body>
