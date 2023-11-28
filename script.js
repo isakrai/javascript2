@@ -11,6 +11,7 @@ function lataaLeffat() {
     xmlhttp.send();
 }
 
+
 function parseLeffat (xml) {
     var xmlData = xml.responseXML;
     var table = "<table>";
@@ -52,6 +53,33 @@ function aikaTunteina(duration){
     return hours + "h " + minutes + "min";
 }
 
+function lataaSijainti() {
+    var url = "https://www.finnkino.fi/xml/Schedule/";
+    var xmlhttp = new XMLHttpRequest();
+
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState === 4 && xmlhttp.status === 200){
+            parseSijainti(this);
+        }
+    }
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+}
+
+function parseSijainti(xml) {
+    var xmlData = xml.responseXML;
+    var table = "<table>";
+    var x = xmlData.getElementsByTagName("TheatreAndAuditorium");
+    for (i=0; i < 10; i++){
+        table += "<tr><td>" + x[i].childNodes[0].nodeValue + "</tr></td>"
+    }
+    console.log(x);
+    table += "</table>";
+    document.getElementById("sijainti").innerHTML = table;
+}
+
+
+/*
 function lataaGenret() {
     var url = "https://www.finnkino.fi/xml/Schedule/";
     var xmlhttp = new XMLHttpRequest();
@@ -75,3 +103,4 @@ function  parseGenret(xml) {
     table += "</table>";
     document.getElementById("genre").innerHTML = table;
 }
+*/
