@@ -16,7 +16,7 @@ function parseLeffat (xml) {
     var xmlData = xml.responseXML;
     var table = "<table>";
     var x = xmlData.getElementsByTagName("Title");
-    for (i=0; i < 10; i++){
+    for (i=0; i < 15; i++){
         table += "<tr><td>" + x[i].childNodes[0].nodeValue + "</tr></td>"
     }
     table += "</table>";
@@ -40,7 +40,7 @@ function parseKestot(xml) {
     var xmlData = xml.responseXML;
     var table = "<table>";
     var x = xmlData.getElementsByTagName("LengthInMinutes");
-    for (i=0; i < 10; i++){
+    for (i=0; i < 15; i++){
         table += "<tr><td>" + aikaTunteina(x[i].childNodes[0].nodeValue) + "</tr></td>"
     }
     console.log(x);
@@ -70,37 +70,10 @@ function parseSijainti(xml) {
     var xmlData = xml.responseXML;
     var table = "<table>";
     var x = xmlData.getElementsByTagName("TheatreAndAuditorium");
-    for (i=0; i < 10; i++){
+    for (i=0; i < 15; i++){
         table += "<tr><td>" + x[i].childNodes[0].nodeValue + "</tr></td>"
     }
     console.log(x);
     table += "</table>";
     document.getElementById("sijainti").innerHTML = table;
 }
-
-
-/*
-function lataaGenret() {
-    var url = "https://www.finnkino.fi/xml/Schedule/";
-    var xmlhttp = new XMLHttpRequest();
-
-    xmlhttp.onreadystatechange = function () {
-        if (xmlhttp.readyState === 4 && xmlhttp.status === 200){
-            parseGenret(this);
-        }
-    }
-    xmlhttp.open("GET", url, true);
-    xmlhttp.send();
-}
-
-function  parseGenret(xml) {
-    var xmlData = xml.responseXML;
-    var table = "<table>";
-    var x = xmlData.getElementsByTagName("Genres");
-    for (i=0; i < 10; i++){
-        table += "<tr><td>" + x[i].childNodes[0].nodeValue + "</tr></td>"
-    }
-    table += "</table>";
-    document.getElementById("genre").innerHTML = table;
-}
-*/

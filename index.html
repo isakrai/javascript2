@@ -11,9 +11,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Elokuvat esillä</h1>
+    <h1>
+        <img src="https://upload.wikimedia.org/wikipedia/fi/7/7a/Finnkino-logo.png" style="height: 300px;"> PROJEKTI-2a 
+        <img src="https://upload.wikimedia.org/wikipedia/fi/7/7a/Finnkino-logo.png" style="height: 300px;">
+    </h1>
+    
     <br><br>
-    <h2>Painamalla näytöllä olevia nappeja, saat haettua 10 ensimmäistä Finnkinolla pyörivää elokuvaa ja tietoja niistä!</h2>
+    <h2>Nappeja painamalla saat lisätietoa 15 elokuvasta, jotka ovat saatavilla Finkinossa tällä hetkellä!</h2>
     <br>
     <hr>
     <br>
@@ -26,22 +30,19 @@
     
         <div class="row">
             <div class="col-sm-4" id="elokuvat">
-                <input type="button" class="button" name="fetch" id="fetch" value="Elokuvat" onclick="lataaLeffat()">
+                <input type="button" class="btn btn-warning btn-lg" name="fetch" id="fetch" value="Elokuvat" onclick="lataaLeffat()">
             </div>
 
-            <div class="col-sm-4" id="kesto">
-                <input type="button" class="button" name="fetch" id="fetch" value="Elokuvan kesto" onclick="lataaKestot()">
+            <div class= "col-sm-4" id="kesto">
+                <input type="button" class="btn btn-warning btn-lg" name="fetch" id="fetch" value="Elokuvan kesto" onclick="lataaKestot()">
             </div>
 
             <div class="col-sm-4" id="sijainti">
-                <input type="button" class="button" name="fetch" id="fetch" value="Elokuvan sijainti" onclick="lataaSijainti()">
+                <input type="button" class="btn btn-warning btn-lg" name="fetch" id="fetch" value="Elokuvan sijainti" onclick="lataaSijainti()">
             </div>
 
         </div>
     </div>
-
-
-
 
 <script src="script.js"></script>
 </body>
