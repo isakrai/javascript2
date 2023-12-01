@@ -47,6 +47,7 @@ function parseKestot(xml) {
     table += "</table>";
     document.getElementById("kesto").innerHTML = table;
 }
+
 function aikaTunteina(duration){
     var minutes = duration % 60;
     var hours =(duration-minutes) / 60;
