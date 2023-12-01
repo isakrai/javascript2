@@ -1,4 +1,4 @@
-Web sovellusten käyttäminen JavaScriptillä / Projekti 2a
+# Web sovellusten käyttäminen JavaScriptillä / Projekti 2a
 
 Teimme tämän sovelluksen parityönä Werneri Pudaksen kanssa. Sovellus hakee Finnkinon sivuilta 15 elokuvaa, niiden keston sekä esityksen sijainnin. 
 
